@@ -1,0 +1,23 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: reports-api
+
+
+keycloak:
+  issuer-uri: ${KEYCLOAK_ISSUER_URI:http://localhost:8080/realms/reports-realm}
+  jwk-set-uri: ${KEYCLOAK_JWK_SET_URI:http://localhost:8080/realms/reports-realm/protocol/openid-connect/certs}
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    oauth:
+      client-id: reports-swagger
+      use-pkce-with-authorization-code-grant: true
+
+clickhouse:
+  url: jdbc:clickhouse://localhost:8123/reports?compress=0
+  username: default
+  password: clickhouse
+  driver-class-name: com.clickhouse.jdbc.ClickHouseDriver
