@@ -17,4 +17,5 @@
 [reports-api](reports-api)
 
 
-user1 и user2 получают свои версии отчётов user3 получить отчёт не может у него нет роли.
+prothetic1 и prothetic2 получают свои версии отчётов, 
+prothetic3 получить отчёт не может: у него нет роли REPORT_USER.

@@ -28,6 +28,7 @@ dependencies {
     implementation 'com.clickhouse:clickhouse-jdbc:0.6.5'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test'
 }
 
 tasks.named('test') {

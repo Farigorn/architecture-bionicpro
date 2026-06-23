@@ -16,12 +16,12 @@ CREATE TABLE IF NOT EXISTS prosthetics (
 
 INSERT INTO clients (id, full_name, email)
 VALUES
-    ('user1', 'Иван Петров', 'user1@example.com'),
-    ('user2', 'Мария Соколова', 'user2@example.com')
+    ('prothetic1', 'Иван Петров', 'prothetic1@example.com'),
+    ('prothetic2', 'Мария Соколова', 'prothetic2@example.com')
     ON CONFLICT (id) DO NOTHING;
 
 INSERT INTO prosthetics (id, client_id, model, serial_number, installed_at)
 VALUES
-    ('prosthetic-001', 'user1', 'BionicPRO Hand v1', 'BP-HAND-001', CURRENT_TIMESTAMP),
-    ('prosthetic-002', 'user2', 'BionicPRO Hand v1', 'BP-HAND-002', CURRENT_TIMESTAMP)
+    ('prosthetic-001', 'prothetic1', 'BionicPRO Hand v1', 'BP-HAND-001', CURRENT_TIMESTAMP),
+    ('prosthetic-002', 'prothetic2', 'BionicPRO Hand v1', 'BP-HAND-002', CURRENT_TIMESTAMP)
     ON CONFLICT (id) DO NOTHING;
